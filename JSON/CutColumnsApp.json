@@ -1,0 +1,52 @@
+{
+  "name": "cut_columns",
+  "label": "Cut columns",
+  "shortDescription": "Extracts columns of data from a tabular file",
+  "longDescription": "Extracts columns of data from a tabular file",
+  "helpURI": "https://github.com/cyverseuk/cut_columns",
+  "datePublished": "",
+  "author":"Alice Minotto",
+  "version": "0.0.0",
+  "deploymentSystem": "cyverseUK-Storage2",
+  "deploymentPath": "/mnt/data/apps/cut_columns",
+  "executionSystem": "cyverseUK-Batch2",
+  "executionType": "CLI",
+  "parallelism": "SERIAL",
+  "templatePath": "wrapper.sh",
+  "testPath": "test.sh",
+  "ontology": [ "http://edamontology.org/operation_3096",
+  "http://edamontology.org/operation_3695",
+  "http://edamontology.org/operation_3359",
+  "http://edamontology.org/topic_0218",
+  "http://edamontology.org/topic_3071"
+  ],
+  "tags": [ "CyverseUK" ],
+  "inputs": [
+    {"id": "tab_file",
+    "value": {
+      "required": true,
+      "default": ""
+    },
+    "details": { "label": "Tabular file",
+      "showArgument": false
+    },
+    "semantics": {
+      "maxCardinality": 1
+    }}
+    ],
+
+
+  "parameters": [
+    {"id": "columns",
+    "value": {
+      "type": "string",
+      "visible": true,
+      "required": true,
+      "validator": "^[1-9]+(, ?[0-9]+)*$"
+    },
+    "details": {
+      "label" : "Columns (e.g. 1,5,9)",
+      "showArgument": false
+      }}
+]
+}
