@@ -1,0 +1,11 @@
+{
+  "name" : "cut_columns",
+  "appId" : "cut_columns-0.0.0",
+  "archive" : false,
+  "inputs": {
+    "tab_file" :  "agave://cyverseuk-storage2/rosysnake/data_test/tabfile"
+  },
+  "parameters" : {
+    "columns": "1,4, 5,1"
+  }
+}
